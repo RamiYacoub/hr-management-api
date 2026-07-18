@@ -49,7 +49,7 @@ The project was developed and tested using:
 - PostgreSQL 17
 - Docker Desktop (used to run the PostgreSQL database)
 
-> **Note:** Docker was used only for the database during development. The application itself is not containerized and can run against any PostgreSQL 17 instance.
+> **Note:** Docker was used only to run the PostgreSQL database during development. The application itself is not containerized and can run against any PostgreSQL 17 instance.
 
 ---
 
@@ -67,7 +67,7 @@ Before running the project, make sure you have:
 
 Configure the datasource in:
 
-```
+```text
 src/main/resources/application.yaml
 ```
 
@@ -81,6 +81,8 @@ spring:
     password: hr_password
 ```
 
+Update these values to match your local PostgreSQL configuration if needed.
+
 ---
 
 ## Running the Application
@@ -93,13 +95,13 @@ git clone https://github.com/RamiYacoub/hr-management-api.git
 
 ### Start the application
 
-Windows
+**Windows**
 
 ```powershell
 .\mvnw.cmd spring-boot:run
 ```
 
-Linux / macOS
+**Linux / macOS**
 
 ```bash
 ./mvnw spring-boot:run
@@ -107,7 +109,7 @@ Linux / macOS
 
 The application will start on:
 
-```
+```text
 http://localhost:8080
 ```
 
@@ -119,7 +121,7 @@ The API is secured using HTTP Basic Authentication.
 
 Default credentials:
 
-```
+```text
 Username: admin
 Password: admin123
 ```
@@ -128,9 +130,9 @@ Password: admin123
 
 ## API Documentation
 
-Swagger UI is available after starting the application:
+After starting the application, open Swagger UI:
 
-```
+```text
 http://localhost:8080/swagger-ui/index.html
 ```
 
@@ -140,11 +142,11 @@ http://localhost:8080/swagger-ui/index.html
 
 Sample reference data is automatically inserted on application startup through:
 
-```
+```text
 src/main/resources/data.sql
 ```
 
-The following data is included:
+The following reference data is included:
 
 - Departments
 - Employees
@@ -155,21 +157,21 @@ The following data is included:
 
 ## Running Tests
 
-Run all unit tests:
+Run all unit tests.
 
-Windows
+**Windows**
 
 ```powershell
 .\mvnw.cmd test
 ```
 
-Linux / macOS
+**Linux / macOS**
 
 ```bash
 ./mvnw test
 ```
 
-The project contains unit tests for the service layer using JUnit 5 and Mockito.
+The project includes unit tests for the service layer using JUnit 5 and Mockito.
 
 ---
 
@@ -177,12 +179,6 @@ The project contains unit tests for the service layer using JUnit 5 and Mockito.
 
 Project assumptions are documented in:
 
-```
+```text
 ASSUMPTIONS.md
 ```
-
----
-
-## Author
-
-**Rami Yacoub**
