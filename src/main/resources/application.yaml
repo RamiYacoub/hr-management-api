@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: hr-management-api
+
+  security:
+    user:
+      name: admin
+      password: admin123
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/hr_management
+    username: hr_user
+    password: hr_password
+
+  sql:
+    init:
+      mode: always
+
+  jpa:
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
